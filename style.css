@@ -1,5 +1,9 @@
 * {
     font-family: 'Roboto', sans-serif;
+    color: #201B16;
+}
+html {
+    scroll-behavior:smooth;
 }
 img {
     width: 100%;
@@ -17,6 +21,18 @@ body {
     margin: auto;
     display: flex;
     flex-direction: column;
+}
+#header {
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+}
+.space-to-right {
+    margin-left: auto;
+    margin-right: 0;
 }
 .section {
     width: 100%;
@@ -50,20 +66,29 @@ body {
     flex-direction: row;
 }
 .button {
-    border-style: solid;
     padding: 8px 24px 8px 24px;
     border-radius: 27px;
     font-size: 14px;
     margin-right: 40px;
     cursor: pointer;
+    text-align: center;
 }
 .filled-button {
     background-color: #8D4F00;
     border-style: none;
     color: white;
-
 }
-
+.elevated-button {
+    border-style: none;
+    box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.147);
+    color: #8D4F00;
+}
+.outline-button {
+    border-style: solid;
+    border-color: #837468;
+    border-width: 1px;
+    color: #8D4F00;
+}
 .font-large {
     margin-bottom: 40px;
     font-size: 57px;
@@ -98,4 +123,58 @@ body {
 }
 .center {
     text-align: center;
+}
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 300,
+    'GRAD' 200,
+    'opsz' 48
+}
+a {
+     text-decoration: none;
+    color: inherit;
+}
+a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+a:active {
+    text-decoration: none;
+    color: inherit;
+}
+.h1-small {
+    font-weight: 100;
+    font-size: 24px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+.on-surface-variant {
+    color: #51443A;
+}
+.primary-color {
+    color: #8D4F00;
+}
+.margin-right-0 {
+    margin-right: 0;
+}
+.input-text {
+    padding: 12px 16px 12px 16px;
+    color: #51443A;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border-color: #837468;
+    font-size: medium;
+}
+.form-container {
+    border-style: solid;
+    padding: 24px;
+    border-radius: 28px;
+    border-color: #837468;
 }
