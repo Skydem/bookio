@@ -89,6 +89,22 @@ body {
     border-width: 1px;
     color: #8D4F00;
 }
+.fab-button {
+    padding: 16px;
+    background-color: #FFDCBD;
+    color: #2D1600;
+    border-radius: 16px;
+    border-style: none;
+    box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.147);
+    align-items: center;
+    vertical-align: middle;
+    text-align: center;
+    display: table;
+}
+.fab-button span {
+    display: table-cell;
+    vertical-align: middle;
+}
 .font-large {
     margin-bottom: 40px;
     font-size: 57px;
@@ -177,4 +193,20 @@ form {
     padding: 24px;
     border-radius: 28px;
     border-color: #837468;
+}
+.nav-rail {
+    border-style: solid;
+    height: 100vh;
+    margin-right: auto;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: auto;
+}
+.nav-item {
+    /* border-style: solid; */
+    width: 60px;
+    height: 60px;
+    vertical-align: middle;
 }
