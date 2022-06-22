@@ -202,11 +202,37 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: auto;
+    padding-top: auto;  
+    padding: 10px;
+}
+.nav-rail-container {
+    /* border-style: solid; */
+    display: table;
+    height: 100%;
+    position: absolute;
+    overflow:hidden;
+    align-items: center;
 }
 .nav-item {
     /* border-style: solid; */
     width: 60px;
     height: 60px;
+    vertical-align: middle;
+}
+.nav-list {
+    display: table-cell;
+    margin: 0;
+    padding: 0;
+}
+.nav-list li {
+    list-style: none;
+    padding: 10px 0;
+    text-align: center;
+}
+.nav-text {
+    font-size: small;
+}
+.nav-helper {
+    display: table-cell;
     vertical-align: middle;
 }
