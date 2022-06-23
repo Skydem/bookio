@@ -293,3 +293,17 @@ form {
 .card-padding {
     padding: 0 10px;
 }
+.no-m-bot {
+    margin-bottom: 0;
+}
+.book-buttons .button {
+    margin-right: 0;
+}
+.book-buttons {
+    justify-content: space-evenly;
+}
+.book-section img {
+    width: 400px;
+    height: 400px;
+    
+}
