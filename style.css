@@ -16,6 +16,27 @@ body {
     /* font-size: 14px;
     line-height: 100%; */
 }
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #9e9e9e #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #9e9e9e;
+    border-radius: 10px;
+    border: 0px solid #ffffff;
+  }
 #wraper {
     max-width: 1240px;
     margin: auto;
@@ -64,6 +85,7 @@ body {
 .buttons {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
 }
 .button {
     padding: 8px 24px 8px 24px;
@@ -195,7 +217,7 @@ form {
     border-color: #837468;
 }
 .nav-rail {
-    border-style: solid;
+    /* border-style: solid; */
     height: 100vh;
     margin-right: auto;
     margin-left: 0;
@@ -204,6 +226,7 @@ form {
     align-items: center;
     padding-top: auto;  
     padding: 10px;
+    position: fixed;
 }
 .nav-rail-container {
     /* border-style: solid; */
@@ -235,4 +258,38 @@ form {
 .nav-helper {
     display: table-cell;
     vertical-align: middle;
+}
+.icon-active {
+    background-color: #FFDCBD;
+    padding: 2px 15px;
+    border-radius: 20px;
+}
+.main-sereach {
+    margin-bottom: 10px;
+}
+.main-sereach h1 {
+    font-weight: lighter;
+}
+.wraper-main {
+    width: 1000px;
+}
+#results {
+    display: flex;
+    flex-direction: row;
+    overflow-y: scroll;
+    flex-wrap: wrap;
+    height: 76.6vh;
+}
+#results .card {
+    flex-basis: 290px;
+    box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.147);
+    padding-bottom: 10px;
+    border-radius: 20px;
+    height: auto;
+}
+#results .card .buttons .button {
+    margin-right: 0;
+}
+.card-padding {
+    padding: 0 10px;
 }
