@@ -21,26 +21,34 @@
         <a href="login.html" class="space-to-right">
             <div class="button elevated-button ">Logowanie</div>
         </a>
-        <a href="register.html">
+        <a href="register.php">
             <div class="button filled-button">Zarejestruj się</div>
         </a>
     </div>
     <div id="wraper">
         <div class="head-section section form-container">
-            <h1 class="h1-small center">Zarejestruj się</h1>
-            <p class="on-surface-variant">Ostatni krok dzieli cię od nowej książki</p>
-            <form action="register.php" method="post">
-                <input type="text" class="input-text" placeholder="e-mail" name="login">
+            <h1 class="h1-small center">Zaloguj się</h1>
+            <p class="on-surface-variant">Witaj spowrotem</p>
+            <div class="messages on-surface-variant center">
+                <?php if(isset($messages)) {
+                    foreach ($messages as $message) {
+                        echo $message;
+                    }
+                }
+                ?>
+            </div>
+            <form action="handleLogin" method="post">
+                <input type="text" class="input-text" placeholder="e-mail" name="email">
                 <input type="password" class="input-text" placeholder="hasło" name="password">
                 <div class="buttons" >
-                    <a href="index.html" class="primary-color button" style="margin-left: auto; margin-right: 0">Anuluj</a>
-                    <input type="submit" value="Zarejestruj się" class="button filled-button margin-right-0">
+                    <a href="index" class="primary-color button" style="margin-left: auto; margin-right: 0">Anuluj</a>
+                    <input type="submit" value="Zaloguj się" class="button filled-button margin-right-0">
                 </div>
             </form>
         </div>
-        <p class="center">Masz już konto??</p>
-        <a href="login.html">
-            <div class="center">Zaloguj się</div>
+        <p class="center">Nie masz konta?</p>
+        <a href="register.php">
+            <div class="center">Zarejestruj się</div>
         </a>
         
     </div>

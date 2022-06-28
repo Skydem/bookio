@@ -18,7 +18,7 @@
                 menu
             </span>
         </div>
-        <a href="login.html" class="space-to-right">
+        <a href="login.php" class="space-to-right">
             <div class="button elevated-button ">Logowanie</div>
         </a>
         <a href="register.html">
@@ -27,20 +27,20 @@
     </div>
     <div id="wraper">
         <div class="head-section section form-container">
-            <h1 class="h1-small center">Zaloguj się</h1>
-            <p class="on-surface-variant">Witaj spowrotem</p>
-            <form action="login.php" method="post">
+            <h1 class="h1-small center">Zarejestruj się</h1>
+            <p class="on-surface-variant">Ostatni krok dzieli cię od nowej książki</p>
+            <form action="register.php" method="post">
                 <input type="text" class="input-text" placeholder="e-mail" name="login">
                 <input type="password" class="input-text" placeholder="hasło" name="password">
                 <div class="buttons" >
-                    <a href="index.html" class="primary-color button" style="margin-left: auto; margin-right: 0">Anuluj</a>
-                    <input type="submit" value="Zaloguj się" class="button filled-button margin-right-0">
+                    <a href="index.php" class="primary-color button" style="margin-left: auto; margin-right: 0">Anuluj</a>
+                    <input type="submit" value="Zarejestruj się" class="button filled-button margin-right-0">
                 </div>
             </form>
         </div>
-        <p class="center">Nie masz konta?</p>
-        <a href="register.html">
-            <div class="center">Zarejestruj się</div>
+        <p class="center">Masz już konto??</p>
+        <a href="login.php">
+            <div class="center">Zaloguj się</div>
         </a>
         
     </div>

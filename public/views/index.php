@@ -18,10 +18,10 @@
                 menu
             </span>
         </div>
-        <a href="login.html" class="space-to-right">
+        <a href="login" class="space-to-right">
             <div class="button elevated-button ">Logowanie</div>
         </a>
-        <a href="register.html">
+        <a href="register.php">
             <div class="button filled-button">Zarejestruj się</div>
         </a>
     </div>

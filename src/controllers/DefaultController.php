@@ -15,4 +15,7 @@ class DefaultController extends AppController {
   public function main() {
     $this->render('main');
   }
+  public function add() {
+      $this->render('add');
+  }
 }

@@ -18,7 +18,7 @@
                 menu
             </span>
         </div>
-        <a href="login.html" class="space-to-right">
+        <a href="login.php" class="space-to-right">
             <div class="button elevated-button ">Logowanie</div>
         </a>
         <a href="register.html">
