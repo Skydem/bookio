@@ -199,6 +199,13 @@ form {
 .primary-color {
     color: #8D4F00;
 }
+.messages {
+    padding: 8px 16px;
+    background-color: #BA1B1B;
+    color: white;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
 .margin-right-0 {
     margin-right: 0;
 }

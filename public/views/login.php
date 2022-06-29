@@ -29,7 +29,7 @@
         <div class="head-section section form-container">
             <h1 class="h1-small center">Zaloguj się</h1>
             <p class="on-surface-variant">Witaj spowrotem</p>
-            <div class="messages on-surface-variant center">
+            <div class="center messages">
                 <?php if(isset($messages)) {
                     foreach ($messages as $message) {
                         echo $message;

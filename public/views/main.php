@@ -71,9 +71,9 @@
         </div>
         <div id="results">
             <div class="card">
-                <img src="public/img/pexels-suzy-hazelwood-1130980.jpg" />
-                <h3 class="card-padding">Zemsta</h3>
-                <p class="card-padding">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et</p>
+                <img src="public/uploads/<?= $book->getImage() ?>" />
+                <h3 class="card-padding"><?= $book->getTitle() ?></h3>
+                <p class="card-padding"><?= $book->getDesc() ?></p>
                 <div class="buttons card-padding">
                     <div class="button elevated-button">Więcej</div>
                     <div class="button filled-button">Do koszyka</div>

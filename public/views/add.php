@@ -13,11 +13,17 @@
 </head>
 <body>
 <h1>Dodaj książkę</h1>
-    <form action="" method="POST">
+    <?php if(isset($messages)) {
+        foreach ($messages as $message) {
+            echo $message;
+        }
+    }
+    ?>
+    <form action="addBook" method="POST" ENCTYPE="multipart/form-data">
         <input type="text" name="title" placeholder="Tytuł książki" class="input-text"/>
         <input type="text" name="desc" placeholder="Opis książki" class="input-text"/>
         Wybierz zdjęcie dla książki
-        <input type="file" name="cover" class="button outline-button"/>
+        <input type="file" name="file" class="button outline-button"/>
         <input type="submit" class="button filled-button">
     </form>
 </body>
