@@ -33,4 +33,36 @@ class BookRepository extends repository {
             $book->getCover()
         ]);
     }
+    public function getBooks(): array {
+        $result = [];
+
+        $stmt = $this->database->connect()->prepare('
+            SELECT * FROM books
+        ');
+        $stmt->execute();
+        $books = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach ($books as $book) {
+            $result[] = new Book(
+                $book['title'],
+                $book['description'],
+                $book['cover']
+            );
+        }
+
+        return $result;
+    }
+
+    public function getBookByTitle(string $searchString) {
+        $searchString = '%'.strtolower($searchString).'%';
+
+        $stmt = $this->database->connect()->prepare('
+            SELECT * FROM books WHERE LOWER(title) LIKE :searchString OR LOWER(description) LIKE :searchString
+        ');
+
+        $stmt->bindParam(':searchString', $searchString, PDO::PARAM_STR);
+        $stmt->execute();
+
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 }

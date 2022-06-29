@@ -16,6 +16,11 @@ class BookController extends AppController {
         $this->bookRepository = new BookRepository();
     }
 
+    public function main() {
+        $books = $this->bookRepository->getBooks();
+        $this->render('main', ['books' => $books]);
+    }
+
     public function addBook() {
         if($this->isPost() && is_uploaded_file($_FILES['file']['tmp_name']) && $this->validate($_FILES['file'])) {
 
@@ -27,11 +32,30 @@ class BookController extends AppController {
             $book = new book($_POST['title'], $_POST['desc'], $_FILES['file']['name']);
             $this->bookRepository->addBook($book);
 
-            return $this->render('main', ['messages' => $this->messages, 'book'=> $book]);
+            return $this->render('main', [
+                'messages' => $this->messages, 'books',
+                'books' => $this->bookRepository->getBooks()
+            ]);
         }
 
 
         return $this->render('add', ['messages' => $this->messages]);
+    }
+
+    public function search() {
+        $contentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : '';
+
+        if($contentType === "application/json") {
+            $content = trim(file_get_contents("php://input"));
+            $decoded = json_decode($content, true);
+
+            header('Content-type: application/json');
+            http_response_code(200);
+
+            echo json_encode($this->bookRepository->getBookByTitle($decoded['search']));
+
+        }
+
     }
 
     private function validate(array $file): bool {
@@ -45,4 +69,6 @@ class BookController extends AppController {
         }
         return true;
     }
+
+
 }
