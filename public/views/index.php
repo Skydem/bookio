@@ -21,7 +21,7 @@
         <a href="login" class="space-to-right">
             <div class="button elevated-button ">Logowanie</div>
         </a>
-        <a href="register.php">
+        <a href="register">
             <div class="button filled-button">Zarejestruj się</div>
         </a>
     </div>
@@ -31,7 +31,7 @@
                 <h1 class="font-large">Bookio</h1>
                 <p class="info-section">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et<p>
                 <div class="buttons">
-                    <a href="public/views/login.html">
+                    <a href="login">
                         <div class="button filled-button">Zaloguj siaę</div>
                     </a>
                     <a href="#more">
