@@ -1,14 +1,18 @@
 <?php
 
 class Book {
+    private $user_id;
     private $title;
+
+
     private $description;
     private $cover;
     private $id;
 
 
 
-    public function __construct($title, $description, $cover, $id) {
+    public function __construct($user_id, $title, $description, $cover, $id=0) {
+        $this->user_id = $user_id;
         $this->title = $title;
         $this->description = $description;
         $this->cover = $cover;
@@ -45,6 +49,13 @@ class Book {
 
     public function setId(int $id) {
         $this->id = $id;
+    }
+
+    public function getUserId():int {
+        return $this->user_id;
+    }
+    public function setUserId(int $user_id) {
+        $this->user_id = $user_id;
     }
 
 

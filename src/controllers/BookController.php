@@ -34,7 +34,7 @@ class BookController extends AppController {
                 dirname(__DIR__).self::UPLOAD_DIRECTORY.$_FILES['file']['name']
             );
 
-            $book = new book($_POST['title'], $_POST['desc'], $_FILES['file']['name']);
+            $book = new book($_SESSION['userId'], $_POST['title'], $_POST['desc'], $_FILES['file']['name']);
             $this->bookRepository->addBook($book);
 
             return $this->render('main', [

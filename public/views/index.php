@@ -41,7 +41,7 @@
                 </div>
             </div>
             <div class="row">
-                <img src="public/img/welcome photo.jpg" alt="" width="200px" class="image-big">
+                <img src="public/img/welcome photo.jpg" alt="" width="200px" class="image-big dn800">
             </div>
         </div>
         <div class="section column-section" id="more">
@@ -73,7 +73,7 @@
         </div>
         <div class="section row-section">
             <div class="row">
-                <img src="public/img/last.jpg" alt="" width="200px" class="image-big">
+                <img src="public/img/last.jpg" alt="" width="200px" class="image-big dn800">
             </div>
             <div class="row column-section">
                 <h1 class="font-large">Gotowy?</h1>

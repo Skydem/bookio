@@ -22,11 +22,11 @@
             </span>
         </div>
         <div class="button fab-button margin-right-0">
-            <a href="add">
-            <span class="material-symbols-outlined">
-                edit
-                </span>
-            </a>
+<!--            <a href="add">-->
+<!--            <span class="material-symbols-outlined">-->
+<!--                edit-->
+<!--                </span>-->
+<!--            </a>-->
         </div>
         <div class="nav-rail-container">
         <div class="nav-helper">
@@ -61,16 +61,11 @@
         </div>
     </div>
 
-    <div id="wraper" class="wraper-main">
-        <?php
-        echo $_SESSION['email'];
-        echo $_SESSION['userId'];
-        echo $_SESSION['logged_in'];
-        ?>
+    <div id="wraper" style="margin-left: 9vw;">
         <div class="main-sereach section">
             <h1>Wyszukaj książkę</h1>
             <input type="text" name="sereach" class="input-text" placeholder="Wyszukaj" id="searchBar"/>
-            <input type="text" name="lokacja" class="input-text" placeholder="Lokalizacja"/>
+<!--            <input type="text" name="lokacja" class="input-text" placeholder="Lokalizacja"/>-->
 <!--            <input type="submit" value="Wyszukaj" class="button tonal-filled-button"/>-->
             <button type="submit" class="button tonal-filled-button search-button">
 <!--                <span class="material-symbols-outlined icon-active">-->

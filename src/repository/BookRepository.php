@@ -17,6 +17,7 @@ class BookRepository extends repository {
         }
 
         return new Book(
+            $book['user_id'],
             $book['title'],
             $book['description'],
             $book['cover'],
@@ -26,9 +27,10 @@ class BookRepository extends repository {
 
     public function addBook(Book $book) {
         $stmt = $this->database->connect()->prepare('
-            INSERT INTO books (user_id, title, description, cover) VALUES (1, ?, ?, ?)
+            INSERT INTO books (user_id, title, description, cover) VALUES (?, ?, ?, ?)
         ');
         $stmt->execute([
+            $book->getUserId(),
             $book->getTitle(),
             $book->getDescription(),
             $book->getCover()
@@ -45,6 +47,7 @@ class BookRepository extends repository {
 
         foreach ($books as $book) {
             $result[] = new Book(
+                $book['user_id'],
                 $book['title'],
                 $book['description'],
                 $book['cover'],
