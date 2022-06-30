@@ -12,6 +12,7 @@
     <title>Dodaj książkę</title>
 </head>
 <body>
+
 <h1>Dodaj książkę</h1>
     <?php if(isset($messages)) {
         foreach ($messages as $message) {
@@ -19,6 +20,7 @@
         }
     }
     ?>
+
     <form action="addBook" method="POST" ENCTYPE="multipart/form-data">
         <input type="text" name="title" placeholder="Tytuł książki" class="input-text"/>
         <input type="text" name="desc" placeholder="Opis książki" class="input-text"/>
@@ -26,5 +28,8 @@
         <input type="file" name="file" class="button outline-button"/>
         <input type="submit" class="button filled-button">
     </form>
+    <br><br>
+    <a href="main" class="button elevated-button">Anuluj/wróć</a>
+
 </body>
 </html>

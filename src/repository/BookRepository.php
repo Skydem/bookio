@@ -18,8 +18,9 @@ class BookRepository extends repository {
 
         return new Book(
             $book['title'],
-            $book['desc'],
-            $book['cover']
+            $book['description'],
+            $book['cover'],
+            $book['id']
         );
     }
 
@@ -46,7 +47,8 @@ class BookRepository extends repository {
             $result[] = new Book(
                 $book['title'],
                 $book['description'],
-                $book['cover']
+                $book['cover'],
+                $book['id']
             );
         }
 
@@ -65,4 +67,5 @@ class BookRepository extends repository {
 
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
 }

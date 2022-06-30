@@ -10,23 +10,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,900;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script type="text/javascript" src="./public/js/search.js" defer></script>
+    <script type="text/javascript" src="./public/js/displayBook.js" defer></script>
     <title>Bookio - mainpage</title>
 
 </head>
 <body id="main-body">
-    <!-- <div id="header">
-        <div id="hamburger">
-            <span class="material-symbols-outlined">
-                menu
-            </span>
-        </div>
-        <a href="login.php" class="space-to-right">
-            <div class="button elevated-button ">Logowanie</div>
-        </a>
-        <a href="register.html">
-            <div class="button filled-button">Zarejestruj się</div>
-        </a>
-    </div> -->
     <div class="nav-rail">
         <div id="hamburger">
             <span class="material-symbols-outlined">
@@ -43,7 +31,13 @@
         <div class="nav-rail-container">
         <div class="nav-helper">
             <ul class="nav-list">
-                <li><a href="#">
+                <li><a href="add">
+                        <span class="material-symbols-outlined button fab-button margin-right-0">
+                            edit
+                        </span>
+                    </a>
+                </li>
+                <li><a href="main">
                     <span class="material-symbols-outlined icon-active">
                         search
                     </span>
@@ -55,23 +49,35 @@
                         </span>
                     <span class="nav-text">Wiadomości</span>
                 </a></li>
-                <li><a href="#">
+                <li><a href="logout">
                     <span class="material-symbols-outlined">
-                        account_circle
+                        logout
                         </span>
                         <br/>
-                        <span class="nav-text">Konto</span>
+                        <span class="nav-text">Wyloguj się</span>
                 </a></li>
             </ul>
         </div>
         </div>
     </div>
+
     <div id="wraper" class="wraper-main">
+        <?php
+        echo $_SESSION['email'];
+        echo $_SESSION['userId'];
+        echo $_SESSION['logged_in'];
+        ?>
         <div class="main-sereach section">
             <h1>Wyszukaj książkę</h1>
             <input type="text" name="sereach" class="input-text" placeholder="Wyszukaj" id="searchBar"/>
             <input type="text" name="lokacja" class="input-text" placeholder="Lokalizacja"/>
-            <input type="submit" value="Wyszukaj" class="button filled-button"/>
+<!--            <input type="submit" value="Wyszukaj" class="button tonal-filled-button"/>-->
+            <button type="submit" class="button tonal-filled-button search-button">
+<!--                <span class="material-symbols-outlined icon-active">-->
+<!--                        search-->
+<!--                    </span>-->
+                <span>Wyszukaj</span>
+            </button>
         </div>
         <div id="results">
             <?php foreach($books as $book): ?>
@@ -79,39 +85,12 @@
                 <img src="public/uploads/<?= $book->getCover() ?>" />
                 <h3 class="card-padding"><?= $book->getTitle() ?></h3>
                 <p class="card-padding"><?= $book->getDescription() ?></p>
-                <div class="buttons card-padding">
-                    <div class="button elevated-button">Więcej</div>
+                <div class="buttons card-padding card-buttons">
+                    <div class="button outline-button" onclick="more('<?php echo $book->getId() ?>')">Więcej</div>
                     <div class="button filled-button">Do koszyka</div>
                 </div>
             </div>
             <?php endforeach; ?>
-<!--            <div class="card">-->
-<!--                <img src="public/img/pexels-suzy-hazelwood-1130980.jpg" />-->
-<!--                <h3 class="card-padding">Zemsta</h3>-->
-<!--                <p class="card-padding">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et</p>-->
-<!--                <div class="buttons card-padding">-->
-<!--                    <div class="button elevated-button">Więcej</div>-->
-<!--                    <div class="button filled-button">Do koszyka</div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="card">-->
-<!--                <img src="public/img/pexels-suzy-hazelwood-1130980.jpg" />-->
-<!--                <h3 class="card-padding">Zemsta</h3>-->
-<!--                <p class="card-padding">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et</p>-->
-<!--                <div class="buttons card-padding">-->
-<!--                    <div class="button elevated-button">Więcej</div>-->
-<!--                    <div class="button filled-button">Do koszyka</div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="card">-->
-<!--                <img src="public/img/pexels-suzy-hazelwood-1130980.jpg" />-->
-<!--                <h3 class="card-padding">Zemsta</h3>-->
-<!--                <p class="card-padding">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et</p>-->
-<!--                <div class="buttons card-padding">-->
-<!--                    <div class="button elevated-button">Więcej</div>-->
-<!--                    <div class="button filled-button">Do koszyka</div>-->
-<!--                </div>-->
-<!--            </div>-->
     </div>
     </div>
 </body>

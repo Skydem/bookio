@@ -29,9 +29,20 @@
         <div class="head-section section form-container">
             <h1 class="h1-small center">Zarejestruj się</h1>
             <p class="on-surface-variant">Ostatni krok dzieli cię od nowej książki</p>
-            <form action="register.php" method="post">
-                <input type="text" class="input-text" placeholder="e-mail" name="login">
-                <input type="password" class="input-text" placeholder="hasło" name="password">
+            <div class="center messages">
+                <?php if(isset($messages)) {
+                    foreach ($messages as $message) {
+                        echo $message;
+                    }
+                }
+                ?>
+            </div>
+            <form action="handleRegister" method="post">
+                <input type="text" class="input-text" placeholder="e-mail" name="email">
+                <input type="password" class="input-text" placeholder="Hasło" name="password">
+                <input type="password" class="input-text" placeholder="Powtórz hasło" name="confirmPassword">
+                <input type="text" class="input-text" placeholder="Imię" name="name">
+                <input type="text" class="input-text" placeholder="Nazwisko" name="surname">
                 <div class="buttons" >
                     <a href="index.php" class="primary-color button" style="margin-left: auto; margin-right: 0">Anuluj</a>
                     <input type="submit" value="Zarejestruj się" class="button filled-button margin-right-0">

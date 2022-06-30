@@ -4,11 +4,15 @@ class Book {
     private $title;
     private $description;
     private $cover;
+    private $id;
 
-    public function __construct($title, $description, $cover) {
+
+
+    public function __construct($title, $description, $cover, $id) {
         $this->title = $title;
         $this->description = $description;
         $this->cover = $cover;
+        $this->id = $id;
     }
 
     public function getTitle(): string {
@@ -24,7 +28,7 @@ class Book {
     }
 
     public function setDescription(string $description) {
-        $this->description = description;
+        $this->description = $description;
     }
 
     public function getCover(): string {
@@ -34,5 +38,14 @@ class Book {
     public function setCover(string $cover) {
         $this->cover = $cover;
     }
+
+    public function getId(): int {
+        return $this->id;
+    }
+
+    public function setId(int $id) {
+        $this->id = $id;
+    }
+
 
 }

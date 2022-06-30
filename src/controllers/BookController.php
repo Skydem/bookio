@@ -20,6 +20,11 @@ class BookController extends AppController {
         $books = $this->bookRepository->getBooks();
         $this->render('main', ['books' => $books]);
     }
+    public function book(int $id) {
+        $book = $this->bookRepository->getBook($id);
+//        die($book->getId());
+        $this->render('book', ['book' => $book]);
+    }
 
     public function addBook() {
         if($this->isPost() && is_uploaded_file($_FILES['file']['tmp_name']) && $this->validate($_FILES['file'])) {
@@ -58,6 +63,10 @@ class BookController extends AppController {
 
     }
 
+
+
+
+
     private function validate(array $file): bool {
         if($file['size'] > self::MAX_FILE_SIZE) {
             $this->messages[] = 'Plik jest za duży';
@@ -69,6 +78,8 @@ class BookController extends AppController {
         }
         return true;
     }
+
+
 
 
 }

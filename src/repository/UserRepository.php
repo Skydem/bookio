@@ -20,7 +20,13 @@ class UserRepository extends repository {
             $user['email'],
             $user['password'],
             $user['name'],
-            $user['surname']
+            $user['surname'],
+            $user['id'],
+            $user['role']
         );
+    }
+
+    public function addUser() {
+
     }
 }

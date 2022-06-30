@@ -121,11 +121,23 @@ body {
     align-items: center;
     vertical-align: middle;
     text-align: center;
-    display: table;
+    /*display: table;*/
+    /*position: relative;*/
 }
 .fab-button span {
     display: table-cell;
     vertical-align: middle;
+}
+.tonal-filled-button {
+    background-color: #FFDCBD;
+    color: #2D1600;
+    border-style: none;
+    padding: 16px 32px;
+}
+.search-button {
+    vertical-align: middle;
+    align-content: center;
+    text-align: center;
 }
 .font-large {
     margin-bottom: 40px;
@@ -147,9 +159,10 @@ body {
     display: flex;
     flex-direction: column;
     height: 100%;
+    background-color: #FAFAFA;
 }
 .card img {
-    max-height: 200px;
+    max-height: 300px;
     border-radius: 20px;
     object-fit: cover;
 }
@@ -231,9 +244,10 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: auto;  
+    padding-top: auto;
     padding: 10px;
     position: fixed;
+    background-color: white;
 }
 .nav-rail-container {
     /* border-style: solid; */
@@ -278,7 +292,7 @@ form {
     font-weight: lighter;
 }
 .wraper-main {
-    width: 1000px;
+    width: 1400px;
 }
 #results {
     display: flex;
@@ -288,17 +302,27 @@ form {
     height: 76.6vh;
 }
 #results .card {
-    flex-basis: 290px;
+    flex-basis: 21%;
     box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.147);
     padding-bottom: 10px;
     border-radius: 20px;
     height: auto;
+    max-height: 400px;
+}
+#results .card h3 {
+    font-weight: lighter;
+}
+#results .card p {
+    font-size: 12px;
 }
 #results .card .buttons .button {
     margin-right: 0;
 }
 .card-padding {
     padding: 0 10px;
+}
+.card-buttons {
+    margin-top: 16px;
 }
 .no-m-bot {
     margin-bottom: 0;
